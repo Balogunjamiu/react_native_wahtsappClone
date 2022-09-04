@@ -11,6 +11,10 @@ import Users from "../../data/Users";
 export type ContactListItemProps = {
     user: User
 }
+  
+// interface ImageProps {
+//     source : ImageSourcePropType
+// }
 
 const ContactListItem =(props:ContactListItemProps)=>{
     const {user} = props
