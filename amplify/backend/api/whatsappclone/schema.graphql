@@ -7,4 +7,17 @@ type User @model {
   name: String!
   imageUri: String
   status: String
+  chatRoomUser : [ChatRoomUser] @hasMany(indexName:"byUser", fields:["id"])
+}
+
+type ChatRoomUser @model{
+id: ID!
+userID : ID! @index(name: "byUser")
+chatRoomID : ID! @index(name: "byChatRoom")
+
+}
+
+type ChatRoom @model{
+    id :ID!
+    chatRoomUsers: [ChatRoomUser] @hasMany(indexName:"byChatRoom", fields:["id"])
 }

@@ -2,11 +2,11 @@ import React from "react";
 import { View, Text, Image,
     TouchableWithoutFeedback } from "react-native";
 import {User} from "../../types";
-import styles from './style'
-import moment from "moment";
+import styles from './style';
 import { useNavigation } from "@react-navigation/native";
 import Users from "../../data/Users";
-
+import { API, graphqlOperation } from "aws-amplify";
+// import {createChatRoom} from '../../src/graphql/mutations'
 
 export type ContactListItemProps = {
     user: User
@@ -21,8 +21,12 @@ const ContactListItem =(props:ContactListItemProps)=>{
 
     const navigation = useNavigation()
 
-    const onClick = ()=>{
-            //navigate to chatroom
+    const onClick = async ()=>{
+            try{
+            
+            }catch(e){
+                console.log(e)
+            }
     }
 return(
     <TouchableWithoutFeedback onPress={onClick}>

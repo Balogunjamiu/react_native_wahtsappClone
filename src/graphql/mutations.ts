@@ -47,3 +47,4 @@ export const deleteUser = /* GraphQL */ `
     }
   }
 `;
+
