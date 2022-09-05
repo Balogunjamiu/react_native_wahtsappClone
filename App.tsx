@@ -43,7 +43,7 @@ const randomImages = [
               ))
 
               if(userData.data.getUser){
-                console.log('user is already registerin database')
+                 console.log('user is already registerin database')
                 return
               }
               
@@ -54,7 +54,6 @@ const randomImages = [
                   status:"Hey, i am using whatsapp",
                 }
                 
-                console.log(newUser)
               await API.graphql(graphqlOperation(
                 createUser,
                 {input: newUser}
